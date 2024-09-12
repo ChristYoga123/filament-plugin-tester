@@ -53,6 +53,10 @@ class AppPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
+            ])
+            ->plugins([
+                \Filament\SpatieLaravelTranslatablePlugin::make()->defaultLocales(['en', 'ar']),
+                \TomatoPHP\FilamentMenus\FilamentMenusPlugin::make()
             ]);
     }
 }
